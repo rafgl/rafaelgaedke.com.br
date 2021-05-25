@@ -1,0 +1,14 @@
+{
+    "firstName": "Rafael",
+    "lastName": "Mendonça",
+    "phone": "+5547997017721",
+    "email": "rafael.luan.gaedke@hotmail.com",
+    "location": {
+        "address": "XV de novembro",
+        "city": "Schroeder",
+        "country": "Brasil"
+    },
+    "position": "Web developer / Flutter",
+    "birthday": "10/07/2001",
+    "aboutMe": "I love to develop \n for WEB & Flutter"
+}

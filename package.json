@@ -1,15 +1,24 @@
 {
-  "name": "rafaelgaedke.com.br",
-  "version": "0.1.0",
+  "name": "Portfolio",
+  "version": "1.0.0",
+  "description": "FRONT-END.LV Portfolio",
+  "author": "Emīls Gulbis",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start"
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "test": "jest"
   },
   "dependencies": {
-    "next": "10.0.3",
-    "react": "17.0.1",
-    "react-dom": "17.0.1"
+    "@nuxtjs/svg": "^0.1.12",
+    "nuxt": "^2.14.7"
+  },
+  "devDependencies": {
+    "@nuxtjs/tailwindcss": "^3.1.0",
+    "node-sass": "^4.14.1",
+    "nuxt-webfontloader": "^1.1.0",
+    "sass-loader": "^10.0.3"
   }
 }

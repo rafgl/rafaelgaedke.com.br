@@ -1,0 +1,44 @@
+[
+  {
+    "name": "contact",
+    "path": "/contact",
+    "component": "/home/rafael/Projetos/rafaelgaedke.com.br/pages/contact.vue",
+    "chunkName": "pages/contact",
+    "_name": "_4c3b2d4d"
+  },
+  {
+    "name": "portfolio",
+    "path": "/portfolio",
+    "component": "/home/rafael/Projetos/rafaelgaedke.com.br/pages/portfolio.vue",
+    "chunkName": "pages/portfolio",
+    "_name": "_1b3ce935"
+  },
+  {
+    "name": "resume",
+    "path": "/resume",
+    "component": "/home/rafael/Projetos/rafaelgaedke.com.br/pages/resume.vue",
+    "chunkName": "pages/resume",
+    "_name": "_3dc6e1e0"
+  },
+  {
+    "name": "api-hello",
+    "path": "/api/hello",
+    "component": "/home/rafael/Projetos/rafaelgaedke.com.br/pages/api/hello.js",
+    "chunkName": "pages/api/hello",
+    "_name": "_3b7e2845"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "/home/rafael/Projetos/rafaelgaedke.com.br/pages/index.vue",
+    "chunkName": "pages/index",
+    "_name": "_7d4c2a3f"
+  },
+  {
+    "name": "app",
+    "path": "/:app",
+    "component": "/home/rafael/Projetos/rafaelgaedke.com.br/pages/_app.js",
+    "chunkName": "pages/_app",
+    "_name": "_e5a6132c"
+  }
+]
