@@ -1,1 +1,0 @@
-{"version":3,"file":"pages/api/hello.js","sources":["webpack:///./pages/api/hello.js"],"sourcesContent":["// Next.js API route support: https://nextjs.org/docs/api-routes/introduction\n\nexport default (req, res) => {\n  res.statusCode = 200\n  res.json({ name: 'John Doe' })\n}\n"],"mappings":";;;;;;;AAAA;AAAA;AAEA;AACA;AACA;AAAA;AAAA;AACA;;;;A","sourceRoot":""}
