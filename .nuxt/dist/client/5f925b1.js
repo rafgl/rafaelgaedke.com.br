@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[3],{187:function(n,o,e){"use strict";e.r(o),o.default=function(n,o){o.statusCode=200,o.json({name:"John Doe"})}}}]);
