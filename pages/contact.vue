@@ -47,15 +47,15 @@
 
         <div class="p-6 shadow-lighter mb-8">
           <p class="font-bold mb-2">Email</p>
-          <a href="mailto:emils.gulbis@gmail.com" class="hover:underline"
-            >emils.gulbis@gmail.com</a
+          <a href="mailto:rafael.luan.gaedke@hotmail.com" class="hover:underline"
+            >rafael.luan.gaedke@hotmail.com</a
           >
         </div>
 
         <div class="p-6 mb-8">
-          <p class="font-bold mb-2">Phone</p>
-          <a href="tel:+37120303056" class="hover:underline"
-            >+371 20 30 30 56</a
+          <p class="font-bold mb-2">Telefone</p>
+          <a href="tel:+5547997017721" class="hover:underline"
+            >47997017721</a
           >
         </div>
 

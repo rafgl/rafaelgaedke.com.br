@@ -1,5 +1,5 @@
 <template>
-  <aside class="w-280px p-10 flex flex-col justify-between bg-blue text-white">
+  <aside class="w-314px p-10 flex flex-col justify-between bg-blue text-white">
     <header class="mb-5">
       <logo />
     </header>
@@ -7,17 +7,17 @@
       <dl class="mb-4">
         <dt class="font-bold">Email</dt>
         <dd>
-          <a href="mailto:emils.gulbis@gmail.com">emils.gulbis@gmail.com</a>
+          <a href="mailto:rafael.luan.gaedke@hotmail.com">rafael.luan.gaedke@hotmail.com</a>
         </dd>
       </dl>
 
       <dl class="mb-4">
-        <dt class="font-bold">Phone</dt>
-        <dd><a href="tel:+37120303056">+371 20 30 30 56</a></dd>
+        <dt class="font-bold">Telefone</dt>
+        <dd><a href="tel:+5547997017721">47 997017721</a></dd>
       </dl>
 
       <dl>
-        <dt class="font-bold">Find me on</dt>
+        <dt class="font-bold">Siga-me nas redes:</dt>
         <dd>
           <ul class="flex">
             <li v-if="facebook" class="mr-4">
