@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:testeweb/controllers/home_tab_controller.dart';
 import 'package:auto_size_text_pk/auto_size_text_pk.dart';
-import 'package:get/get_state_manager/src/simple/get_view.dart';
 import 'package:testeweb/pages/home.dart';
 import 'package:testeweb/pages/portifolio.dart';
 import 'package:testeweb/services/storage.dart';
