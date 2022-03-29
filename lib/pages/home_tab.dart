@@ -3,7 +3,6 @@ import 'package:get/get.dart';
 import 'package:testeweb/controllers/home_tab_controller.dart';
 import 'package:auto_size_text_pk/auto_size_text_pk.dart';
 import 'package:testeweb/pages/home.dart';
-import 'package:testeweb/pages/portifolio.dart';
 import 'package:testeweb/services/storage.dart';
 import 'package:testeweb/utils/colors.dart';
 import 'package:testeweb/utils/config.dart';
@@ -109,90 +108,90 @@ class HomeTabPage extends GetView<HomeTabController> {
                   ),
                 ),
               ),
-              Container(
-                padding: const EdgeInsets.all(5.0),
-                width: 100,
-                height: 40,
-                alignment: Alignment.center,
-                child: Obx(
-                  () => AutoSizeText(
-                    Strings.about.tr,
-                    maxFontSize: 14,
-                    minFontSize: 8,
-                    maxLines: 1,
-                    style: TextStyle(
-                      fontWeight: FontWeight.w600,
-                      // ignore: unrelated_type_equality_checks
-                      color: controller.currentIndex.value == 1
-                          ? MyColors.red
-                          : Colors.grey,
-                    ),
-                  ),
-                ),
-              ),
-              Container(
-                padding: const EdgeInsets.all(5.0),
-                width: 100,
-                height: 40,
-                alignment: Alignment.center,
-                child: Obx(
-                  () => AutoSizeText(
-                    Strings.service.tr,
-                    maxFontSize: 14,
-                    minFontSize: 8,
-                    maxLines: 1,
-                    style: TextStyle(
-                      fontWeight: FontWeight.w600,
-                      // ignore: unrelated_type_equality_checks
-                      color: controller.currentIndex.value == 2
-                          ? MyColors.red
-                          : Colors.grey,
-                    ),
-                  ),
-                ),
-              ),
-              Container(
-                padding: const EdgeInsets.all(5.0),
-                width: 100,
-                height: 40,
-                alignment: Alignment.center,
-                child: Obx(
-                  () => AutoSizeText(
-                    Strings.portfolio.tr,
-                    maxFontSize: 14,
-                    minFontSize: 8,
-                    maxLines: 1,
-                    style: TextStyle(
-                      fontWeight: FontWeight.w600,
-                      // ignore: unrelated_type_equality_checks
-                      color: controller.currentIndex.value == 3
-                          ? MyColors.red
-                          : Colors.grey,
-                    ),
-                  ),
-                ),
-              ),
-              Container(
-                padding: const EdgeInsets.all(5.0),
-                width: 100,
-                height: 40,
-                alignment: Alignment.center,
-                child: Obx(
-                  () => AutoSizeText(
-                    Strings.contact.tr,
-                    maxFontSize: 14,
-                    minFontSize: 8,
-                    maxLines: 1,
-                    style: TextStyle(
-                      fontWeight: FontWeight.w600,
-                      // ignore: unrelated_type_equality_checks
-                      color: controller.currentIndex.value == 4
-                          ? MyColors.red
-                          : Colors.grey,
-                    ),
-                  ),
-                ),
-              ),
+              // Container(
+              //   padding: const EdgeInsets.all(5.0),
+              //   width: 100,
+              //   height: 40,
+              //   alignment: Alignment.center,
+              //   child: Obx(
+              //     () => AutoSizeText(
+              //       Strings.about.tr,
+              //       maxFontSize: 14,
+              //       minFontSize: 8,
+              //       maxLines: 1,
+              //       style: TextStyle(
+              //         fontWeight: FontWeight.w600,
+              //         // ignore: unrelated_type_equality_checks
+              //         color: controller.currentIndex.value == 1
+              //             ? MyColors.red
+              //             : Colors.grey,
+              //       ),
+              //     ),
+              //   ),
+              // ),
+              // Container(
+              //   padding: const EdgeInsets.all(5.0),
+              //   width: 100,
+              //   height: 40,
+              //   alignment: Alignment.center,
+              //   child: Obx(
+              //     () => AutoSizeText(
+              //       Strings.service.tr,
+              //       maxFontSize: 14,
+              //       minFontSize: 8,
+              //       maxLines: 1,
+              //       style: TextStyle(
+              //         fontWeight: FontWeight.w600,
+              //         // ignore: unrelated_type_equality_checks
+              //         color: controller.currentIndex.value == 2
+              //             ? MyColors.red
+              //             : Colors.grey,
+              //       ),
+              //     ),
+              //   ),
+              // ),
+              // Container(
+              //   padding: const EdgeInsets.all(5.0),
+              //   width: 100,
+              //   height: 40,
+              //   alignment: Alignment.center,
+              //   child: Obx(
+              //     () => AutoSizeText(
+              //       Strings.portfolio.tr,
+              //       maxFontSize: 14,
+              //       minFontSize: 8,
+              //       maxLines: 1,
+              //       style: TextStyle(
+              //         fontWeight: FontWeight.w600,
+              //         // ignore: unrelated_type_equality_checks
+              //         color: controller.currentIndex.value == 3
+              //             ? MyColors.red
+              //             : Colors.grey,
+              //       ),
+              //     ),
+              //   ),
+              // ),
+              // Container(
+              //   padding: const EdgeInsets.all(5.0),
+              //   width: 100,
+              //   height: 40,
+              //   alignment: Alignment.center,
+              //   child: Obx(
+              //     () => AutoSizeText(
+              //       Strings.contact.tr,
+              //       maxFontSize: 14,
+              //       minFontSize: 8,
+              //       maxLines: 1,
+              //       style: TextStyle(
+              //         fontWeight: FontWeight.w600,
+              //         // ignore: unrelated_type_equality_checks
+              //         color: controller.currentIndex.value == 4
+              //             ? MyColors.red
+              //             : Colors.grey,
+              //       ),
+              //     ),
+              //   ),
+              // ),
             ],
           ),
           excludeHeaderSemantics: true,
@@ -206,11 +205,12 @@ class HomeTabPage extends GetView<HomeTabController> {
           controller: controller.tabController,
           // ignore: prefer_const_literals_to_create_immutables
           children: [
-            const HomePage(),
-            const Text("page 2"),
-            Container(),
-            const PortfolioPage(),
-            Container(),
+            SingleChildScrollView(
+                child: Padding(
+              padding:
+                  const EdgeInsets.symmetric(vertical: 20.0, horizontal: 40.0),
+              child: const HomePage(),
+            )),
           ],
         ),
       ),

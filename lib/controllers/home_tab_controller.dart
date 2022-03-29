@@ -31,7 +31,7 @@ class HomeTabController extends GetxController
   @override
   void onInit() async {
     tabController = TabController(
-      length: 5,
+      length: 1,
       vsync: this,
     );
 
