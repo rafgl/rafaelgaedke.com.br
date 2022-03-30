@@ -31,9 +31,7 @@ class HomeTabPage extends GetView<HomeTabController> {
                 "EUA",
                 style: TextStyle(
                   fontWeight: FontWeight.w700,
-                  color: StorageService.box.read(Config.LANGUAGE) == "English"
-                      ? MyColors.red
-                      : Colors.grey,
+                  color: StorageService.box.read(Config.LANGUAGE) == "English" ? MyColors.red : Colors.grey,
                 ),
               ),
             ),
@@ -47,9 +45,7 @@ class HomeTabPage extends GetView<HomeTabController> {
                 "BR",
                 style: TextStyle(
                   fontWeight: FontWeight.w700,
-                  color: StorageService.box.read(Config.LANGUAGE) == "Português"
-                      ? MyColors.red
-                      : Colors.grey,
+                  color: StorageService.box.read(Config.LANGUAGE) == "Português" ? MyColors.red : Colors.grey,
                 ),
               ),
             ),
@@ -63,9 +59,7 @@ class HomeTabPage extends GetView<HomeTabController> {
                 "ES",
                 style: TextStyle(
                   fontWeight: FontWeight.w700,
-                  color: StorageService.box.read(Config.LANGUAGE) == "Español"
-                      ? MyColors.red
-                      : Colors.grey,
+                  color: StorageService.box.read(Config.LANGUAGE) == "Español" ? MyColors.red : Colors.grey,
                 ),
               ),
             ),
@@ -101,9 +95,7 @@ class HomeTabPage extends GetView<HomeTabController> {
                     style: TextStyle(
                       fontWeight: FontWeight.w600,
                       // ignore: unrelated_type_equality_checks
-                      color: controller.currentIndex.value == 0
-                          ? MyColors.red
-                          : Colors.grey,
+                      color: controller.currentIndex.value == 0 ? MyColors.red : Colors.grey,
                     ),
                   ),
                 ),
@@ -207,8 +199,7 @@ class HomeTabPage extends GetView<HomeTabController> {
           children: [
             SingleChildScrollView(
                 child: Padding(
-              padding:
-                  const EdgeInsets.symmetric(vertical: 20.0, horizontal: 40.0),
+              padding: const EdgeInsets.symmetric(vertical: 20.0, horizontal: 40.0),
               child: const HomePage(),
             )),
           ],

@@ -79,12 +79,10 @@ class PortfolioPage extends GetView<PortfolioController> {
                   ),
                   GridView.count(
                     crossAxisCount: 2,
-                    childAspectRatio:
-                        (((MediaQuery.of(context).size.width - 10) / 2) / 330),
+                    childAspectRatio: (((MediaQuery.of(context).size.width - 10) / 2) / 330),
                     controller: ScrollController(keepScrollOffset: false),
                     shrinkWrap: true,
-                    children:
-                        List.generate(controller.projects.length, (index) {
+                    children: List.generate(controller.projects.length, (index) {
                       return Column(
                         children: [
                           SizedBox(
@@ -102,10 +100,7 @@ class PortfolioPage extends GetView<PortfolioController> {
                                     Stack(
                                       alignment: Alignment.bottomLeft,
                                       children: [
-                                        Image.asset(
-                                            controller.projects[index].img
-                                                .toString(),
-                                            height: 100),
+                                        Image.asset(controller.projects[index].img.toString(), height: 100),
                                       ],
                                     ),
                                     Padding(
@@ -116,14 +111,9 @@ class PortfolioPage extends GetView<PortfolioController> {
                                       child: Column(
                                         children: <Widget>[
                                           Padding(
-                                            padding: const EdgeInsets.only(
-                                                left: 20,
-                                                right: 20,
-                                                top: 20,
-                                                bottom: 15),
+                                            padding: const EdgeInsets.only(left: 20, right: 20, top: 20, bottom: 15),
                                             child: Text(
-                                              controller.projects[index].title
-                                                  .toString(),
+                                              controller.projects[index].title.toString(),
                                               textAlign: TextAlign.center,
                                               style: const TextStyle(
                                                   fontSize: 50,
@@ -133,18 +123,12 @@ class PortfolioPage extends GetView<PortfolioController> {
                                             ),
                                           ),
                                           Padding(
-                                            padding: const EdgeInsets.only(
-                                                left: 0,
-                                                top: 10,
-                                                bottom: 0,
-                                                right: 0),
+                                            padding: const EdgeInsets.only(left: 0, top: 10, bottom: 0, right: 0),
                                             // ignore: deprecated_member_use
                                             child: RaisedButton(
                                               onPressed: () {},
                                               color: MyColors.red,
-                                              padding:
-                                                  const EdgeInsets.fromLTRB(
-                                                      30, 2, 30, 2),
+                                              padding: const EdgeInsets.fromLTRB(30, 2, 30, 2),
                                               child: const Text(
                                                 'Ver mais detalhes',
                                                 style: TextStyle(

@@ -4,6 +4,7 @@ import 'package:testeweb/components/line_horizontal.dart';
 import 'package:testeweb/controllers/home_controller.dart';
 import 'package:testeweb/utils/Strings.dart';
 import 'package:testeweb/utils/colors.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class HomePage extends GetView<HomeController> {
   const HomePage({Key? key}) : super(key: key);
@@ -80,8 +81,7 @@ class HomePage extends GetView<HomeController> {
                   ),
                   RichText(
                     text: TextSpan(
-                      style:
-                          const TextStyle(fontSize: 13, fontFamily: "NotoSans"),
+                      style: const TextStyle(fontSize: 13, fontFamily: "NotoSans"),
                       children: <TextSpan>[
                         TextSpan(
                           text: "${Strings.iam.tr} ",
@@ -133,7 +133,16 @@ class HomePage extends GetView<HomeController> {
                       // ignore: deprecated_member_use
                       child: FlatButton(
                         highlightColor: Colors.blue.withOpacity(0.1),
-                        onPressed: () async {},
+                        onPressed: () async {
+                          var url =
+                              'https://docs.google.com/document/d/1xjhE_9hfJymCKrNs_MG1PjryGAqf9Zrd3zu-SI8V9Hg/edit';
+
+                          if (await canLaunch(url)) {
+                            await launch(url);
+                          } else {
+                            print('Failed to open phone url $url');
+                          }
+                        },
                         padding: const EdgeInsets.all(0.0),
                         color: MyColors.red,
                         minWidth: double.infinity,
@@ -143,10 +152,7 @@ class HomePage extends GetView<HomeController> {
                             'Download CV',
                             textAlign: TextAlign.center,
                             maxLines: 1,
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontWeight: FontWeight.w700,
-                                fontSize: 18),
+                            style: TextStyle(color: Colors.white, fontWeight: FontWeight.w700, fontSize: 18),
                           ),
                         ),
                       ),

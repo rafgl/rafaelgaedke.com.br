@@ -16,8 +16,7 @@ class Drawhorizontalline extends CustomPainter {
     if (reverse) {
       canvas.drawLine(const Offset(30.0, 0.0), const Offset(5.0, 0.0), _paint);
     } else {
-      canvas.drawLine(
-          const Offset(10.0, 0.0), const Offset(250.0, 0.0), _paint);
+      canvas.drawLine(const Offset(10.0, 0.0), const Offset(250.0, 0.0), _paint);
     }
   }
 
