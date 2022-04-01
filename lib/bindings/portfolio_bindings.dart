@@ -1,5 +1,5 @@
 import 'package:get/get.dart';
-import 'package:testeweb/controllers/portfolio_controller.dart';
+import 'package:rafaelgaedke/controllers/portfolio_controller.dart';
 
 class PortfolioBinding extends Bindings {
   @override

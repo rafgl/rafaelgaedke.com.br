@@ -1,6 +1,6 @@
 import 'package:get/get_state_manager/get_state_manager.dart';
 import 'package:get_storage/get_storage.dart';
-import 'package:testeweb/utils/config.dart';
+import 'package:rafaelgaedke/utils/config.dart';
 
 class StorageService extends GetxService {
   static GetStorage get box => GetStorage(Config.STORAGE_PREFIX);

@@ -2,11 +2,13 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:testeweb/services/storage.dart';
-import 'package:testeweb/utils/config.dart';
+import 'package:rafaelgaedke/services/storage.dart';
+import 'package:rafaelgaedke/utils/config.dart';
 
-class HomeTabController extends GetxController with SingleGetTickerProviderMixin {
-  RxString selectedLang = RxString(StorageService.box.read(Config.LANGUAGE) ?? 'English');
+class HomeTabController extends GetxController
+    with SingleGetTickerProviderMixin {
+  RxString selectedLang =
+      RxString(StorageService.box.read(Config.LANGUAGE) ?? 'English');
 
   final RxInt currentIndex = 0.obs;
   DateTime? currentBackPressTime;
@@ -21,7 +23,8 @@ class HomeTabController extends GetxController with SingleGetTickerProviderMixin
     if (index == currentIndex.value) return;
     currentIndex.value = index;
     if (tabController != null) {
-      tabController!.animateTo(index, duration: const Duration(milliseconds: 300), curve: Curves.ease);
+      tabController!.animateTo(index,
+          duration: const Duration(milliseconds: 300), curve: Curves.ease);
     }
   }
 

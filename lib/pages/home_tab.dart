@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:testeweb/controllers/home_tab_controller.dart';
+import 'package:rafaelgaedke/controllers/home_tab_controller.dart';
 import 'package:auto_size_text_pk/auto_size_text_pk.dart';
-import 'package:testeweb/pages/home.dart';
-import 'package:testeweb/services/storage.dart';
-import 'package:testeweb/utils/colors.dart';
-import 'package:testeweb/utils/config.dart';
-import 'package:testeweb/utils/languages/app_location.dart';
-import 'package:testeweb/utils/strings.dart';
+import 'package:rafaelgaedke/pages/home.dart';
+import 'package:rafaelgaedke/services/storage.dart';
+import 'package:rafaelgaedke/utils/colors.dart';
+import 'package:rafaelgaedke/utils/config.dart';
+import 'package:rafaelgaedke/utils/languages/app_location.dart';
+import 'package:rafaelgaedke/utils/strings.dart';
 
 class HomeTabPage extends GetView<HomeTabController> {
   const HomeTabPage({Key? key}) : super(key: key);
@@ -31,7 +31,9 @@ class HomeTabPage extends GetView<HomeTabController> {
                 "EUA",
                 style: TextStyle(
                   fontWeight: FontWeight.w700,
-                  color: StorageService.box.read(Config.LANGUAGE) == "English" ? MyColors.red : Colors.grey,
+                  color: StorageService.box.read(Config.LANGUAGE) == "English"
+                      ? MyColors.red
+                      : Colors.grey,
                 ),
               ),
             ),
@@ -45,7 +47,9 @@ class HomeTabPage extends GetView<HomeTabController> {
                 "BR",
                 style: TextStyle(
                   fontWeight: FontWeight.w700,
-                  color: StorageService.box.read(Config.LANGUAGE) == "Português" ? MyColors.red : Colors.grey,
+                  color: StorageService.box.read(Config.LANGUAGE) == "Português"
+                      ? MyColors.red
+                      : Colors.grey,
                 ),
               ),
             ),
@@ -59,7 +63,9 @@ class HomeTabPage extends GetView<HomeTabController> {
                 "ES",
                 style: TextStyle(
                   fontWeight: FontWeight.w700,
-                  color: StorageService.box.read(Config.LANGUAGE) == "Español" ? MyColors.red : Colors.grey,
+                  color: StorageService.box.read(Config.LANGUAGE) == "Español"
+                      ? MyColors.red
+                      : Colors.grey,
                 ),
               ),
             ),
@@ -95,7 +101,9 @@ class HomeTabPage extends GetView<HomeTabController> {
                     style: TextStyle(
                       fontWeight: FontWeight.w600,
                       // ignore: unrelated_type_equality_checks
-                      color: controller.currentIndex.value == 0 ? MyColors.red : Colors.grey,
+                      color: controller.currentIndex.value == 0
+                          ? MyColors.red
+                          : Colors.grey,
                     ),
                   ),
                 ),
@@ -197,10 +205,10 @@ class HomeTabPage extends GetView<HomeTabController> {
           controller: controller.tabController,
           // ignore: prefer_const_literals_to_create_immutables
           children: [
-            SingleChildScrollView(
+            const SingleChildScrollView(
                 child: Padding(
-              padding: const EdgeInsets.symmetric(vertical: 20.0, horizontal: 40.0),
-              child: const HomePage(),
+              padding: EdgeInsets.symmetric(vertical: 20.0, horizontal: 40.0),
+              child: HomePage(),
             )),
           ],
         ),

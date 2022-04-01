@@ -1,7 +1,7 @@
 import 'dart:ui';
 
-import 'package:testeweb/utils/languages/es.dart';
-import 'package:testeweb/utils/languages/pt.dart';
+import 'package:rafaelgaedke/utils/languages/es.dart';
+import 'package:rafaelgaedke/utils/languages/pt.dart';
 import 'package:get/get.dart';
 
 import 'en.dart';

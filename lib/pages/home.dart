@@ -1,9 +1,10 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:testeweb/components/line_horizontal.dart';
-import 'package:testeweb/controllers/home_controller.dart';
-import 'package:testeweb/utils/Strings.dart';
-import 'package:testeweb/utils/colors.dart';
+import 'package:rafaelgaedke/components/line_horizontal.dart';
+import 'package:rafaelgaedke/controllers/home_controller.dart';
+import 'package:rafaelgaedke/utils/Strings.dart';
+import 'package:rafaelgaedke/utils/colors.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class HomePage extends GetView<HomeController> {
@@ -13,50 +14,6 @@ class HomePage extends GetView<HomeController> {
     return <Widget>[
       Stack(
         children: [
-          // Positioned(
-          //   bottom: 15,
-          //   child: Padding(
-          //     padding: const EdgeInsets.all(20.0),
-          //     child: Row(
-          //       children: [
-          //         IconButton(
-          //           onPressed: () {},
-          //           icon: const Icon(
-          //             Icons.facebook_outlined,
-          //             color: Color(0xff3d4154),
-          //             size: 30,
-          //           ),
-          //         ),
-          //         IconButton(
-          //           onPressed: () {},
-          //           icon: const Icon(
-          //             Icons.alternate_email_outlined,
-          //             color: Color(0xff3d4154),
-          //             size: 30,
-          //           ),
-          //         ),
-          //         IconButton(
-          //           onPressed: () {},
-          //           icon: const Icon(
-          //             Icons.phone_android,
-          //             color: Color(0xff3d4154),
-          //             size: 30,
-          //           ),
-          //         ),
-          //         Padding(
-          //           padding: const EdgeInsets.only(top: 5),
-          //           child: IconButton(
-          //             onPressed: () {},
-          //             icon: Image.asset(
-          //               "assets/img/logotipo-do-linkedin.png",
-          //               width: 30,
-          //             ),
-          //           ),
-          //         ),
-          //       ],
-          //     ),
-          //   ),
-          // ),
           Container(
               alignment: Alignment.center,
               width: width,
@@ -81,13 +38,14 @@ class HomePage extends GetView<HomeController> {
                   ),
                   RichText(
                     text: TextSpan(
-                      style: const TextStyle(fontSize: 13, fontFamily: "NotoSans"),
+                      style:
+                          const TextStyle(fontSize: 13, fontFamily: "NotoSans"),
                       children: <TextSpan>[
                         TextSpan(
                           text: "${Strings.iam.tr} ",
                           style: const TextStyle(
                             fontWeight: FontWeight.w700,
-                            fontSize: 68,
+                            fontSize: 55,
                             color: Color(0xff3d4154),
                           ),
                         ),
@@ -95,7 +53,7 @@ class HomePage extends GetView<HomeController> {
                           text: 'Rafael ',
                           style: TextStyle(
                             fontWeight: FontWeight.w700,
-                            fontSize: 68,
+                            fontSize: 55,
                             color: MyColors.red,
                           ),
                         ),
@@ -103,7 +61,7 @@ class HomePage extends GetView<HomeController> {
                           text: 'Mendonça',
                           style: TextStyle(
                             fontWeight: FontWeight.w700,
-                            fontSize: 68,
+                            fontSize: 55,
                             color: Color(0xff3d4154),
                           ),
                         ),
@@ -140,7 +98,9 @@ class HomePage extends GetView<HomeController> {
                           if (await canLaunch(url)) {
                             await launch(url);
                           } else {
-                            print('Failed to open phone url $url');
+                            if (kDebugMode) {
+                              print('Failed to open phone url $url');
+                            }
                           }
                         },
                         padding: const EdgeInsets.all(0.0),
@@ -152,11 +112,113 @@ class HomePage extends GetView<HomeController> {
                             'Download CV',
                             textAlign: TextAlign.center,
                             maxLines: 1,
-                            style: TextStyle(color: Colors.white, fontWeight: FontWeight.w700, fontSize: 18),
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.w700,
+                                fontSize: 18),
                           ),
                         ),
                       ),
                     ),
+                  ),
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      IconButton(
+                        onPressed: () async {
+                          var url = 'https://www.facebook.com/rafael.gaedke/';
+
+                          if (await canLaunch(url)) {
+                            await launch(url);
+                          } else {
+                            if (kDebugMode) {
+                              print('Failed to open phone url $url');
+                            }
+                          }
+                        },
+                        icon: const Icon(
+                          Icons.facebook_outlined,
+                          color: Color(0xff3d4154),
+                          size: 30,
+                        ),
+                      ),
+                      IconButton(
+                        onPressed: () async {
+                          var url = 'mailto:rafaelgaedke@gmail.com';
+
+                          if (await canLaunch(url)) {
+                            await launch(url);
+                          } else {
+                            if (kDebugMode) {
+                              print('Failed to open phone url $url');
+                            }
+                          }
+                        },
+                        icon: const Icon(
+                          Icons.alternate_email_outlined,
+                          color: Color(0xff3d4154),
+                          size: 30,
+                        ),
+                      ),
+                      IconButton(
+                        onPressed: () async {
+                          var url = 'tel:+5547997017721';
+
+                          if (await canLaunch(url)) {
+                            await launch(url);
+                          } else {
+                            if (kDebugMode) {
+                              print('Failed to open phone url $url');
+                            }
+                          }
+                        },
+                        icon: const Icon(
+                          Icons.phone_android,
+                          color: Color(0xff3d4154),
+                          size: 30,
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(top: 5),
+                        child: IconButton(
+                          onPressed: () async {
+                            var url = 'http://twitter.com/rafs_gl';
+
+                            if (await canLaunch(url)) {
+                              await launch(url);
+                            } else {
+                              if (kDebugMode) {
+                                print('Failed to open phone url $url');
+                              }
+                            }
+                          },
+                          icon: Image.asset(
+                            "assets/img/twitter.png",
+                            width: 32,
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(top: 5),
+                        child: IconButton(
+                          onPressed: () async {
+                            var url = 'https://www.linkedin.com/in/rafgls/';
+
+                            if (await canLaunch(url)) {
+                              await launch(url);
+                            } else {
+                              if (kDebugMode) {
+                                print('Failed to open phone url $url');
+                              }
+                            }
+                          },
+                          icon: Image.asset(
+                            "assets/img/logotipo-do-linkedin.png",
+                            width: 30,
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
                 ],
               )),

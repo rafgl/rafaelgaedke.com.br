@@ -1,12 +1,12 @@
 import 'package:get/get.dart';
 import 'package:get/get_navigation/src/routes/get_route.dart';
-import 'package:testeweb/bindings/home_bindings.dart';
-import 'package:testeweb/bindings/home_tab_bindings.dart';
-import 'package:testeweb/bindings/portfolio_bindings.dart';
-import 'package:testeweb/pages/home.dart';
-import 'package:testeweb/pages/home_tab.dart';
-import 'package:testeweb/pages/not_found.dart';
-import 'package:testeweb/pages/portifolio.dart';
+import 'package:rafaelgaedke/bindings/home_bindings.dart';
+import 'package:rafaelgaedke/bindings/home_tab_bindings.dart';
+import 'package:rafaelgaedke/bindings/portfolio_bindings.dart';
+import 'package:rafaelgaedke/pages/home.dart';
+import 'package:rafaelgaedke/pages/home_tab.dart';
+import 'package:rafaelgaedke/pages/not_found.dart';
+import 'package:rafaelgaedke/pages/portifolio.dart';
 
 import 'routes.dart';
 
