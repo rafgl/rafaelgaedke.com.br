@@ -6,8 +6,7 @@ const Map<String, String> ptPT = {
   Strings.portfolio: 'PORTFOLIO',
   Strings.contact: 'CONTATO',
   Strings.service: 'SERVIÇOS',
-  Strings.msg:
-      'Profissional no desenvolvimento de aplicativos mobile para IOS como para Android.',
+  Strings.msg: 'Profissional no desenvolvimento de aplicativos mobile para iOS como para Android.',
   Strings.iam: 'Eu sou',
   Strings.hello: 'OLÁ',
 };

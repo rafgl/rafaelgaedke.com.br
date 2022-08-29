@@ -6,8 +6,7 @@ const Map<String, String> esES = {
   Strings.portfolio: 'PORTAFOLIO',
   Strings.contact: 'CONTACTO',
   Strings.service: 'SERVICIO',
-  Strings.msg:
-      'Profesional en el desarrollo de aplicaciones móviles para IOS y Android.',
+  Strings.msg: 'Profesional en el desarrollo de aplicaciones móviles para iOS y Android.',
   Strings.iam: 'Soy',
   Strings.hello: 'HOLA',
 };

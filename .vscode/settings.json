@@ -1,0 +1,76 @@
+{
+    "sync.autoUpload": true,
+    "editor.formatOnPaste": true,
+    "dart.flutterSdkPath": "\/Users\/rafaelgaedke\/flutter\/bin",
+    "[dart]": {
+        "editor.suggestSelection": "first",
+        "editor.tabCompletion": "onlySnippets",
+        "editor.wordBasedSuggestions": true,
+        "editor.selectionHighlight": true,
+        "editor.formatOnSave": true,
+        "editor.formatOnType": true,
+        "editor.suggest.snippetsPreventQuickSuggestions": true,
+        "editor.rulers": [
+            120
+        ],
+    },
+    "editor.rulers": [
+        120
+    ],
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true,
+        "source.organizeImports": true,
+    },
+    "dart.lineLength": 120,
+    "window.zoomLevel": 0,
+    "dart.debugExternalPackageLibraries": true,
+    "dart.debugSdkLibraries": true,
+    "explorer.confirmDragAndDrop": true,
+    "editor.bracketPairColorization.enabled": true,
+    "workbench.colorCustomizations": {
+        "editorBracketHighlight.foreground1": "#FFFFFF",
+        "editorBracketHighlight.foreground2": "#FFFFFF",
+        "editorBracketHighlight.foreground3": "#FFFFFF",
+        "editorBracketHighlight.foreground4": "#FFFFFF",
+        "editorBracketHighlight.foreground5": "#FFFFFF",
+        "editorBracketHighlight.foreground6": "#FFFFFF",
+        "editorBracketHighlight.unexpectedBracket.foreground": "#FFFFFF"
+    },
+    "[html]": {
+        "editor.foldingStrategy": "indentation",
+    },
+    "editor.detectIndentation": true,
+    "editor.renderWhitespace": "all",
+    "workbench.iconTheme": "material-icon-theme",
+    "editor.formatOnSave": true,
+    "sync.gist": "b32211bf6edb0115ade5e11afc5697e4",
+    "tabnine.experimentalAutoImports": true,
+    "workbench.settings.editor": "ui",
+    "workbench.editor.splitInGroupLayout": "vertical",
+    "workbench.editor.closeOnFileDelete": true,
+    "workbench.editor.enablePreviewFromCodeNavigation": true,
+    "sync.quietSync": true,
+    "sync.autoDownload": true,
+    "explorer.confirmDelete": false,
+    "editor.minimap.enabled": true,
+    "workbench.editor.showTabs": true,
+    "workbench.colorTheme": "Omni",
+    "window.titleBarStyle": "native",
+    "editor.accessibilitySupport": "off",
+    "breadcrumbs.enabled": true,
+    "extensions.ignoreRecommendations": true,
+    "terminal.integrated.env.osx": {
+        "FIG_NEW_SESSION": "1"
+    },
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+        "**/*.g.dart": true,
+    },
+    "security.workspace.trust.untrustedFiles": "open",
+    "editor.matchBrackets": "never",
+}

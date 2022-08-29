@@ -6,8 +6,7 @@ const Map<String, String> enEn = {
   Strings.portfolio: 'PORTFOLIO',
   Strings.contact: 'CONTACT',
   Strings.service: 'SERVICE',
-  Strings.msg:
-      'Professional in the development of mobile applications for IOS and Android.',
+  Strings.msg: 'Professional in the development of mobile applications for iOS and Android.',
   Strings.iam: 'I\'am',
   Strings.hello: 'HELLO',
 };
