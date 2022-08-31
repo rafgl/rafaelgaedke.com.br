@@ -37,6 +37,7 @@ class HomePage extends GetView<HomeController> {
         alignment: Alignment.center,
         width: width,
         height: height,
+        // color: Colors.red,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.center,
@@ -100,7 +101,7 @@ class HomePage extends GetView<HomeController> {
                 ),
               ),
             ),
-            const SizedBox(height: 50),
+            const SizedBox(height: 13),
             Container(
               margin: const EdgeInsets.only(top: 10),
               alignment: Alignment.centerLeft,
