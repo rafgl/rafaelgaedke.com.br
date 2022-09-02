@@ -141,15 +141,12 @@ class HomePage extends GetView<HomeController> {
             Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                _icon(
-                    path: 'https://www.facebook.com/rafael.gaedke/',
-                    iconWidget: Icons.facebook_outlined,
-                    padding: false),
-                _icon(
-                    path: 'mailto:rafaelgaedke@gmail.com', iconWidget: Icons.alternate_email_outlined, padding: false),
-                _icon(path: 'tel:+5547997017721', iconWidget: Icons.phone_android, padding: false),
-                _icon(path: 'http://twitter.com/rafs_gl', iconWidget: MdiIcons.twitter, padding: true),
-                _icon(path: 'https://www.linkedin.com/in/rafgls/', iconWidget: MdiIcons.linkedin, padding: true),
+                _icon(path: 'https://www.facebook.com/rafael.gaedke/', iconWidget: Icons.facebook_outlined),
+                _icon(path: 'mailto:rafaelgaedke@gmail.com', iconWidget: Icons.alternate_email_outlined),
+                _icon(path: 'tel:+5547997017721', iconWidget: Icons.phone_android),
+                _icon(path: 'http://twitter.com/rafs_gl', iconWidget: MdiIcons.twitter),
+                _icon(path: 'https://www.linkedin.com/in/rafgls/', iconWidget: MdiIcons.linkedin),
+                _icon(path: 'https://github.com/rafgl', iconWidget: MdiIcons.github),
               ],
             ),
           ],
@@ -170,7 +167,7 @@ class HomePage extends GetView<HomeController> {
     ];
   }
 
-  Widget _icon({IconData? iconWidget, bool? padding, String? path}) {
+  Widget _icon({IconData? iconWidget, String? path}) {
     return IconButton(
       onPressed: () async {
         if (await canLaunch(path!)) {

@@ -1,6 +1,6 @@
 // ignore: file_names
 class Strings {
-  static const title = 'Rafael Gaedke - Desenvolvedor Mobile';
+  static const title = 'Rafael Mendonça - Flutter Developer';
   //HOME
   static const home = 'home';
   static const about = 'about';
