@@ -36,7 +36,7 @@ class HomePage extends GetView<HomeController> {
       Container(
         alignment: Alignment.center,
         width: width,
-        height: height,
+        height: height + 60,
         // color: Colors.red,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -147,6 +147,7 @@ class HomePage extends GetView<HomeController> {
                 _icon(path: 'http://twitter.com/rafs_gl', iconWidget: MdiIcons.twitter),
                 _icon(path: 'https://www.linkedin.com/in/rafgls/', iconWidget: MdiIcons.linkedin),
                 _icon(path: 'https://github.com/rafgl', iconWidget: MdiIcons.github),
+                _icon(path: 'https://www.youtube.com/channel/UCiMqRRVZ72FKi_XM86_oNGA', iconWidget: MdiIcons.youtube),
               ],
             ),
           ],
