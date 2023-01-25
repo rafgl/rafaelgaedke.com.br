@@ -141,13 +141,13 @@ class HomePage extends GetView<HomeController> {
             Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                _icon(path: 'https://www.facebook.com/rafael.gaedke/', iconWidget: Icons.facebook_outlined),
-                _icon(path: 'mailto:rafaelgaedke@gmail.com', iconWidget: Icons.alternate_email_outlined),
-                _icon(path: 'tel:+5547997017721', iconWidget: Icons.phone_android),
-                _icon(path: 'http://twitter.com/rafs_gl', iconWidget: MdiIcons.twitter),
+                // _icon(path: 'https://www.facebook.com/rafael.gaedke/', iconWidget: Icons.facebook_outlined),
                 _icon(path: 'https://www.linkedin.com/in/rafgls/', iconWidget: MdiIcons.linkedin),
+                _icon(path: 'mailto:rafaelgaedke@gmail.com', iconWidget: Icons.alternate_email_outlined),
+                // _icon(path: 'tel:+5547997017721', iconWidget: Icons.phone_android),
+                // _icon(path: 'http://twitter.com/rafs_gl', iconWidget: MdiIcons.twitter),
                 _icon(path: 'https://github.com/rafgl', iconWidget: MdiIcons.github),
-                _icon(path: 'https://www.youtube.com/channel/UCiMqRRVZ72FKi_XM86_oNGA', iconWidget: MdiIcons.youtube),
+                // _icon(path: 'https://www.youtube.com/channel/UCiMqRRVZ72FKi_XM86_oNGA', iconWidget: MdiIcons.youtube),
               ],
             ),
           ],
@@ -161,7 +161,7 @@ class HomePage extends GetView<HomeController> {
           backgroundColor: Colors.transparent,
           child: ClipRRect(
             borderRadius: BorderRadius.circular(500),
-            child: Image.asset("assets/img/eu.png"),
+            child: Image.asset("assets/img/eu.jpg"),
           ),
         ),
       ),
