@@ -110,8 +110,12 @@ class HomePage extends GetView<HomeController> {
                 width: 200,
                 height: 40,
                 // ignore: deprecated_member_use
-                child: FlatButton(
-                  highlightColor: Colors.blue.withOpacity(0.1),
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    padding: const EdgeInsets.all(0.0),
+                    backgroundColor: MyColors.red,
+                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+                  ),
                   onPressed: () async {
                     var url = 'https://docs.google.com/document/d/1xjhE_9hfJymCKrNs_MG1PjryGAqf9Zrd3zu-SI8V9Hg/edit';
 
@@ -123,13 +127,10 @@ class HomePage extends GetView<HomeController> {
                       }
                     }
                   },
-                  padding: const EdgeInsets.all(0.0),
-                  color: MyColors.red,
-                  minWidth: double.infinity,
                   child: const Padding(
                     padding: EdgeInsets.all(10.0),
                     child: Text(
-                      'Download CV',
+                      'Acessar CV',
                       textAlign: TextAlign.center,
                       maxLines: 1,
                       style: TextStyle(color: Colors.white, fontWeight: FontWeight.w700, fontSize: 18),

@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_web_plugins/flutter_web_plugins.dart';
+import 'package:get/get.dart';
 import 'package:rafaelgaedke/utils/languages/app_location.dart';
 import 'package:rafaelgaedke/utils/pages.dart';
 import 'package:rafaelgaedke/utils/routes.dart';
 import 'package:rafaelgaedke/utils/strings.dart';
-import 'package:get/get.dart';
 
 void main() {
+  setUrlStrategy(PathUrlStrategy());
   runApp(const MyApp());
 }
 

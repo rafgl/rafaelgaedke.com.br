@@ -29,6 +29,8 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  flutter_web_plugins:
+    sdk: flutter
 
   flutter_lints: ^1.0.0
   get: ^4.3.8

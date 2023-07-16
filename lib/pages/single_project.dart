@@ -7,8 +7,6 @@ class SingleProjectPage extends GetView<SingleProjectController> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        appBar: AppBar(title: const Text('SingleProjectPage')),
-        body: const SafeArea(child: Text('SingleProjectController')));
+    return Scaffold(appBar: AppBar(title: const Text('SingleProjectPage')), body: const SafeArea(child: Text('SingleProjectController')));
   }
 }

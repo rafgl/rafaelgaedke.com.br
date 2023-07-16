@@ -11,17 +11,17 @@
         "editor.formatOnType": true,
         "editor.suggest.snippetsPreventQuickSuggestions": true,
         "editor.rulers": [
-            120
+            9999
         ],
     },
     "editor.rulers": [
-        120
+        9999
     ],
     "editor.codeActionsOnSave": {
         "source.fixAll.eslint": true,
         "source.organizeImports": true,
     },
-    "dart.lineLength": 120,
+    "dart.lineLength": 9999,
     "window.zoomLevel": 0,
     "dart.debugExternalPackageLibraries": true,
     "dart.debugSdkLibraries": true,

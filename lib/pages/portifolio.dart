@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:rafaelgaedke/controllers/portfolio_controller.dart';
 import 'package:get/get.dart';
+import 'package:rafaelgaedke/controllers/portfolio_controller.dart';
 import 'package:rafaelgaedke/utils/colors.dart';
 
 class PortfolioPage extends GetView<PortfolioController> {
@@ -85,8 +85,7 @@ class PortfolioPage extends GetView<PortfolioController> {
                             return Column(
                               children: [
                                 SizedBox(
-                                  width:
-                                      MediaQuery.of(context).size.width - 1000,
+                                  width: MediaQuery.of(context).size.width - 1000,
                                   height: 300,
                                   child: Card(
                                     clipBehavior: Clip.antiAlias,
@@ -95,16 +94,12 @@ class PortfolioPage extends GetView<PortfolioController> {
                                       onTap: () {},
                                       child: Column(
                                         mainAxisSize: MainAxisSize.min,
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.center,
+                                        crossAxisAlignment: CrossAxisAlignment.center,
                                         children: [
                                           Stack(
                                             alignment: Alignment.bottomLeft,
                                             children: [
-                                              Image.asset(
-                                                  controller.projects[index].img
-                                                      .toString(),
-                                                  height: 100),
+                                              Image.asset(controller.projects[index].img.toString(), height: 100),
                                             ],
                                           ),
                                           Padding(
@@ -115,43 +110,25 @@ class PortfolioPage extends GetView<PortfolioController> {
                                             child: Column(
                                               children: <Widget>[
                                                 Padding(
-                                                  padding:
-                                                      const EdgeInsets.only(
-                                                          left: 20,
-                                                          right: 20,
-                                                          top: 20,
-                                                          bottom: 15),
+                                                  padding: const EdgeInsets.only(left: 20, right: 20, top: 20, bottom: 15),
                                                   child: Text(
-                                                    controller
-                                                        .projects[index].title
-                                                        .toString(),
+                                                    controller.projects[index].title.toString(),
                                                     textAlign: TextAlign.center,
-                                                    style: const TextStyle(
-                                                        fontSize: 50,
-                                                        fontWeight:
-                                                            FontWeight.w500,
-                                                        color: MyColors.red,
-                                                        fontFamily: "NotoSans"),
+                                                    style: const TextStyle(fontSize: 50, fontWeight: FontWeight.w500, color: MyColors.red, fontFamily: "NotoSans"),
                                                   ),
                                                 ),
                                                 Padding(
-                                                  padding:
-                                                      const EdgeInsets.only(
-                                                          left: 0,
-                                                          top: 10,
-                                                          bottom: 0,
-                                                          right: 0),
+                                                  padding: const EdgeInsets.only(left: 0, top: 10, bottom: 0, right: 0),
                                                   // ignore: deprecated_member_use
-                                                  child: RaisedButton(
+                                                  child: ElevatedButton(
                                                     onPressed: () {},
-                                                    color: MyColors.red,
-                                                    padding: const EdgeInsets
-                                                        .fromLTRB(30, 2, 30, 2),
+                                                    // color: MyColors.red,
+                                                    // padding: const EdgeInsets
+                                                    // .fromLTRB(30, 2, 30, 2),
                                                     child: const Text(
                                                       'Ver mais detalhes',
                                                       style: TextStyle(
-                                                        fontWeight:
-                                                            FontWeight.w300,
+                                                        fontWeight: FontWeight.w300,
                                                         color: Colors.white,
                                                         fontSize: 16,
                                                       ),
