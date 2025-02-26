@@ -7,6 +7,7 @@ import 'package:rafaelgaedke/pages/home.dart';
 import 'package:rafaelgaedke/pages/home_tab.dart';
 import 'package:rafaelgaedke/pages/not_found.dart';
 import 'package:rafaelgaedke/pages/portifolio.dart';
+import 'package:rafaelgaedke/pages/projects.dart';
 
 import 'routes.dart';
 
@@ -30,6 +31,10 @@ class AppPages {
           name: Routes.portfolio,
           page: () => const PortfolioPage(),
           binding: PortfolioBinding(),
+        ),
+        GetPage(
+          name: Routes.projects,
+          page: () => const ProjectsPage(),
         ),
       ];
 }

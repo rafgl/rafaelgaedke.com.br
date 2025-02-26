@@ -6,6 +6,7 @@ import 'package:rafaelgaedke/components/line_horizontal.dart';
 import 'package:rafaelgaedke/controllers/home_controller.dart';
 import 'package:rafaelgaedke/utils/Strings.dart';
 import 'package:rafaelgaedke/utils/colors.dart';
+import 'package:rafaelgaedke/utils/routes.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class HomePage extends GetView<HomeController> {
@@ -102,42 +103,72 @@ class HomePage extends GetView<HomeController> {
               ),
             ),
             const SizedBox(height: 13),
-            Container(
-              margin: const EdgeInsets.only(top: 10),
-              alignment: Alignment.centerLeft,
-              child: Container(
-                margin: const EdgeInsets.only(bottom: 20, right: 20),
-                width: 200,
-                height: 40,
-                // ignore: deprecated_member_use
-                child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    padding: const EdgeInsets.all(0.0),
-                    backgroundColor: MyColors.red,
-                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-                  ),
-                  onPressed: () async {
-                    var url = 'https://docs.google.com/document/d/1xjhE_9hfJymCKrNs_MG1PjryGAqf9Zrd3zu-SI8V9Hg/edit';
+            Row(
+              children: [
+                Container(
+                  margin: const EdgeInsets.only(top: 10),
+                  alignment: Alignment.centerLeft,
+                  child: Container(
+                    margin: const EdgeInsets.only(bottom: 20, right: 20),
+                    width: 200,
+                    height: 40,
+                    // ignore: deprecated_member_use
+                    child: ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        padding: const EdgeInsets.all(0.0),
+                        backgroundColor: MyColors.red,
+                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+                      ),
+                      onPressed: () async {
+                        var url = 'https://docs.google.com/document/d/1xjhE_9hfJymCKrNs_MG1PjryGAqf9Zrd3zu-SI8V9Hg/edit';
 
-                    if (await canLaunch(url)) {
-                      await launch(url);
-                    } else {
-                      if (kDebugMode) {
-                        print('Failed to open phone url $url');
-                      }
-                    }
-                  },
-                  child: const Padding(
-                    padding: EdgeInsets.all(10.0),
-                    child: Text(
-                      'Acessar CV',
-                      textAlign: TextAlign.center,
-                      maxLines: 1,
-                      style: TextStyle(color: Colors.white, fontWeight: FontWeight.w700, fontSize: 18),
+                        if (await canLaunch(url)) {
+                          await launch(url);
+                        } else {
+                          if (kDebugMode) {
+                            print('Failed to open phone url $url');
+                          }
+                        }
+                      },
+                      child: const Padding(
+                        padding: EdgeInsets.all(10.0),
+                        child: Text(
+                          'Acessar CV',
+                          textAlign: TextAlign.center,
+                          maxLines: 1,
+                          style: TextStyle(color: Colors.white, fontWeight: FontWeight.w700, fontSize: 18),
+                        ),
+                      ),
                     ),
                   ),
                 ),
-              ),
+                Container(
+                  margin: const EdgeInsets.only(top: 10),
+                  alignment: Alignment.centerLeft,
+                  child: Container(
+                    margin: const EdgeInsets.only(bottom: 20, right: 20),
+                    width: 200,
+                    height: 40,
+                    child: ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        padding: const EdgeInsets.all(0.0),
+                        backgroundColor: MyColors.red,
+                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+                      ),
+                      onPressed: () => Get.toNamed(Routes.projects),
+                      child: const Padding(
+                        padding: EdgeInsets.all(10.0),
+                        child: Text(
+                          'Ver Projetos',
+                          textAlign: TextAlign.center,
+                          maxLines: 1,
+                          style: TextStyle(color: Colors.white, fontWeight: FontWeight.w700, fontSize: 18),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ],
             ),
             Row(
               crossAxisAlignment: CrossAxisAlignment.start,

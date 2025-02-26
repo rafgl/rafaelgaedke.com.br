@@ -138,7 +138,7 @@ class PortfolioPage extends GetView<PortfolioController> {
                                               ],
                                             ),
                                           ),
-                                          const ButtonBar(),
+                                          const OverflowBar(),
                                         ],
                                       ),
                                     ),

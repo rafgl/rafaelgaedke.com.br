@@ -1,0 +1,80 @@
+{
+    "projects": [
+        {
+            "title": "OCPlay",
+            "description": "Aplicativo jornal de noticias, com noticias de futebol, politica, economia, entretenimento e etc.",
+            "technologies": [
+                "Flutter",
+                "Dart",
+                "GetX"
+            ],
+            "imageUrl": "assets/img/ocplay.webp",
+            "projectUrl": "https://github.com/rafgl",
+            "category": "Mobile",
+            "details": "OCPlay é um aplicativo de jornal digital que oferece notícias atualizadas sobre diversos temas como esportes, política, economia e entretenimento. Desenvolvido com Flutter para garantir uma experiência fluida em dispositivos Android e iOS.",
+            "features": [
+                "Feed de notícias personalizado",
+                "Notificações em tempo real",
+                "Modo offline para leitura posterior",
+                "Compartilhamento de notícias"
+            ]
+        },
+        {
+            "title": "MyMime",
+            "description": "Aplicativo para posto de combustivel, com sistema de login, cadastro de veiculos, abastecimento, historico de abastecimentos e etc.",
+            "technologies": [
+                "Flutter",
+                "Dart",
+                "GetX"
+            ],
+            "imageUrl": "assets/img/mymime.webp",
+            "projectUrl": "https://github.com/rafgl",
+            "category": "Mobile",
+            "details": "MyMime é um aplicativo completo para postos de combustível que permite aos usuários gerenciar abastecimentos, encontrar postos próximos e acessar cupons de desconto. Integra sistema de pagamento e histórico detalhado de transações.",
+            "features": [
+                "Localização de postos próximos",
+                "Gerenciamento de veículos",
+                "Histórico de abastecimentos",
+                "Sistema de cupons e descontos"
+            ]
+        },
+        {
+            "title": "NSCTotal",
+            "description": "Aplicativo jornal de noticias, com noticias de futebol, politica, economia, entretenimento e etc.",
+            "technologies": [
+                "Flutter",
+                "Dart",
+                "GetX"
+            ],
+            "imageUrl": "/img/nsctotal.webp",
+            "projectUrl": "https://github.com/rafgl",
+            "category": "Mobile",
+            "details": "NSCTotal é uma plataforma de notícias multimídia que integra conteúdo jornalístico com transmissões de rádio ao vivo. Oferece cobertura completa de notícias locais e nacionais com interface intuitiva e recursos avançados de personalização.",
+            "features": [
+                "Streaming de rádio ao vivo",
+                "Podcasts e conteúdo de áudio",
+                "Notícias categorizadas",
+                "Favoritos e histórico de leitura"
+            ]
+        },
+        {
+            "title": "AgroShop",
+            "description": "Aplicativo loja de produtos para agricultura, com sistema de login, cadastro de usuarios, produtos, carrinho de compras, pagamento e etc.",
+            "technologies": [
+                "Flutter",
+                "Dart",
+                "GetX"
+            ],
+            "imageUrl": "/img/agroshop.webp",
+            "projectUrl": "https://github.com/rafgl",
+            "category": "Mobile",
+            "details": "AgroShop é um marketplace especializado em produtos agrícolas que conecta produtores rurais a fornecedores de insumos e equipamentos. O aplicativo facilita a compra de produtos para agricultura com sistema completo de e-commerce.",
+            "features": [
+                "Catálogo de produtos agrícolas",
+                "Sistema de busca avançada",
+                "Carrinho de compras",
+                "Múltiplos métodos de pagamento"
+            ]
+        }
+    ]
+}

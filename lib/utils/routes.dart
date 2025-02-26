@@ -3,4 +3,5 @@ class Routes {
   static const homeTab = '/';
   static const notFound = '/notFound';
   static const portfolio = '/portfolio';
+  static const projects = '/projects';
 }

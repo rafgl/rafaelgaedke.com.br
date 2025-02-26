@@ -1,13 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_web_plugins/flutter_web_plugins.dart';
 import 'package:get/get.dart';
 import 'package:rafaelgaedke/utils/languages/app_location.dart';
 import 'package:rafaelgaedke/utils/pages.dart';
 import 'package:rafaelgaedke/utils/routes.dart';
 import 'package:rafaelgaedke/utils/strings.dart';
+import 'package:rafaelgaedke/web_init.dart';
 
-void main() {
-  setUrlStrategy(PathUrlStrategy());
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  // Inicialização específica para web
+  await initializeWeb();
+
   runApp(const MyApp());
 }
 
@@ -32,6 +36,10 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: Colors.white,
         visualDensity: VisualDensity.adaptivePlatformDensity,
         fontFamily: "Roboto",
+        colorScheme: ColorScheme.fromSwatch(
+          primarySwatch: Colors.blue,
+          backgroundColor: Colors.white,
+        ),
       ),
     );
   }
