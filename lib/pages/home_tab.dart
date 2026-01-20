@@ -19,19 +19,27 @@ class HomeTabPage extends GetView<HomeTabController> {
   }
 
   Widget _body(BuildContext context) {
+    final screenWidth = MediaQuery.of(context).size.width;
+    final isMobile = screenWidth < 900;
+
     return Container(
       width: MediaQuery.of(context).size.width,
       height: MediaQuery.of(context).size.height,
       color: const Color(0xffecf1fd),
       child: TabBarView(
         controller: controller.tabController,
-        children: const [
-          SingleChildScrollView(
-            child: Padding(
-              padding: EdgeInsets.symmetric(vertical: 20.0, horizontal: 40.0),
-              child: HomePage(),
-            ),
-          ),
+        children: [
+          isMobile
+              ? const SingleChildScrollView(
+                  child: Padding(
+                    padding: EdgeInsets.symmetric(vertical: 20.0, horizontal: 20.0),
+                    child: HomePage(),
+                  ),
+                )
+              : const Padding(
+                  padding: EdgeInsets.symmetric(vertical: 20.0, horizontal: 40.0),
+                  child: HomePage(),
+                ),
         ],
       ),
     );
@@ -45,33 +53,38 @@ class HomeTabPage extends GetView<HomeTabController> {
         backgroundColor: const Color(0xffecf1fd),
         elevation: 0.0,
         title: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            _textbutton(
-              onPressed: () {
-                StorageService.box.write(Config.LANGUAGE, 'English');
-                controller.selectedLang.value = 'English';
-                LocalizationService().changeLocale('English');
-              },
-              language: 'EUA',
-              languageDefined: 'English',
-            ),
-            _textbutton(
-              onPressed: () {
-                StorageService.box.write(Config.LANGUAGE, 'Português');
-                controller.selectedLang.value = 'Português';
-                LocalizationService().changeLocale('Português');
-              },
-              language: 'BR',
-              languageDefined: 'Português',
-            ),
-            _textbutton(
-              onPressed: () {
-                StorageService.box.write(Config.LANGUAGE, 'Español');
-                controller.selectedLang.value = 'Español';
-                LocalizationService().changeLocale('Español');
-              },
-              language: 'ES',
-              languageDefined: 'Español',
+            Row(
+              children: [
+                _textbutton(
+                  onPressed: () {
+                    StorageService.box.write(Config.LANGUAGE, 'English');
+                    controller.selectedLang.value = 'English';
+                    LocalizationService().changeLocale('English');
+                  },
+                  language: 'EUA',
+                  languageDefined: 'English',
+                ),
+                _textbutton(
+                  onPressed: () {
+                    StorageService.box.write(Config.LANGUAGE, 'Português');
+                    controller.selectedLang.value = 'Português';
+                    LocalizationService().changeLocale('Português');
+                  },
+                  language: 'BR',
+                  languageDefined: 'Português',
+                ),
+                _textbutton(
+                  onPressed: () {
+                    StorageService.box.write(Config.LANGUAGE, 'Español');
+                    controller.selectedLang.value = 'Español';
+                    LocalizationService().changeLocale('Español');
+                  },
+                  language: 'ES',
+                  languageDefined: 'Español',
+                ),
+              ],
             ),
           ],
         ),

@@ -89,7 +89,7 @@ class PortfolioPage extends GetView<PortfolioController> {
                                   height: 300,
                                   child: Card(
                                     clipBehavior: Clip.antiAlias,
-                                    shadowColor: Colors.grey.withOpacity(0.5),
+                                    shadowColor: Colors.grey.withValues(alpha: 0.5),
                                     child: InkWell(
                                       onTap: () {},
                                       child: Column(
@@ -138,7 +138,7 @@ class PortfolioPage extends GetView<PortfolioController> {
                                               ],
                                             ),
                                           ),
-                                          const ButtonBar(),
+                                          const OverflowBar(),
                                         ],
                                       ),
                                     ),

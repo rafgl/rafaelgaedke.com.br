@@ -6,7 +6,7 @@ const Map<String, String> ptPT = {
   Strings.portfolio: 'PORTFOLIO',
   Strings.contact: 'CONTATO',
   Strings.service: 'SERVIÇOS',
-  Strings.msg: 'Profissional no desenvolvimento de aplicativos mobile para iOS como para Android.',
+  Strings.msg: 'Engenheiro de Software | Especialista em Flutter e Dart | Desenvolvimento iOS | Kotlin e Swift | Apple Watch | Wear OS | Android TV',
   Strings.iam: 'Eu sou',
   Strings.hello: 'OLÁ',
 };

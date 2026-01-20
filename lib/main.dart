@@ -6,8 +6,19 @@ import 'package:rafaelgaedke/utils/pages.dart';
 import 'package:rafaelgaedke/utils/routes.dart';
 import 'package:rafaelgaedke/utils/strings.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
   setUrlStrategy(PathUrlStrategy());
+
+  // Inicializar Firebase
+  // await Firebase.initializeApp();
+
+  // Inicializar serviços
+  // await Get.putAsync(() => StorageService().init());
+  // await Get.putAsync(() => FirebaseAnalyticsService().onInit());
+  // await Get.putAsync(() => AnalyticsService().onInit());
+  // Get.put(AnalyticsController());
+
   runApp(const MyApp());
 }
 

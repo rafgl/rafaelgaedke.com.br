@@ -5,21 +5,21 @@
     "[dart]": {
         "editor.suggestSelection": "first",
         "editor.tabCompletion": "onlySnippets",
-        "editor.wordBasedSuggestions": true,
+        "editor.wordBasedSuggestions": "matchingDocuments",
         "editor.selectionHighlight": true,
         "editor.formatOnSave": true,
         "editor.formatOnType": true,
         "editor.suggest.snippetsPreventQuickSuggestions": true,
         "editor.rulers": [
-            9999
-        ],
+            99999
+        ]
     },
     "editor.rulers": [
-        9999
+        999999
     ],
     "editor.codeActionsOnSave": {
-        "source.fixAll.eslint": true,
-        "source.organizeImports": true,
+        "source.fixAll": "explicit",
+        "source.organizeImports": "explicit"
     },
     "dart.lineLength": 9999,
     "window.zoomLevel": 0,
@@ -53,7 +53,7 @@
     "sync.autoDownload": true,
     "explorer.confirmDelete": false,
     "editor.minimap.enabled": true,
-    "workbench.editor.showTabs": true,
+    "workbench.editor.showTabs": "multiple",
     "workbench.colorTheme": "Omni",
     "window.titleBarStyle": "native",
     "editor.accessibilitySupport": "off",
