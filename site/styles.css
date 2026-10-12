@@ -1,0 +1,38 @@
+/* Base layout, shared with the Mesa, Som and Casa landing pages (their styles.css), trimmed to what
+   this page uses. theme.css sets the colors for light and dark. */
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; }
+button { font: inherit; cursor: pointer; }
+:focus-visible { outline: 2px solid var(--brand); outline-offset: 3px; }
+img { max-width: 100%; }
+
+.wrap { max-width: 1200px; margin: 0 auto; padding-inline: 24px; }
+
+.langs { display: inline-flex; gap: 4px; padding: 3px; border: 1px solid var(--line-2); border-radius: 999px; }
+.langs a { padding: 4px 10px; border-radius: 999px; font-size: 12px; }
+
+.ctas { display: flex; flex-wrap: wrap; gap: 12px; }
+.btn { display: inline-flex; align-items: center; min-height: 48px; padding: 0 22px; border-radius: 14px; text-decoration: none; font-weight: 600; }
+
+.section { padding-block: 72px; display: flex; flex-direction: column; gap: 24px; }
+.section.center { align-items: center; text-align: center; }
+.eyebrow { font-size: 13px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; }
+.grid3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; margin: 8px 0 0; padding: 0; list-style: none; }
+.grid4 { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-top: 8px; }
+.card { padding: 28px; border-radius: 20px; display: flex; flex-direction: column; gap: 12px; }
+.card p { margin: 0; }
+
+.chips { display: flex; flex-wrap: wrap; gap: 12px; margin: 0; padding: 0; list-style: none; }
+.chip { padding: 14px 18px; border-radius: 14px; border: 1px solid; display: flex; flex-direction: column; gap: 4px; }
+.chip span { font-size: 13px; }
+
+.privacy { flex-direction: row; flex-wrap: wrap; gap: 32px; align-items: center; padding: clamp(28px, 5vw, 56px); border-radius: 28px; }
+.privacy > div { flex: 1 1 360px; min-width: 0; display: flex; flex-direction: column; gap: 12px; }
+.checks { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 10px; text-align: left; }
+.checks li::before { content: "✓"; margin-right: 10px; }
+
+@media (max-width: 480px) {
+  .wrap { padding-inline: 16px; }
+}
