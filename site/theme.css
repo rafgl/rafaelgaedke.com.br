@@ -125,9 +125,9 @@ p, li { font-weight: 300; }
 .app-head h3 { font-size: 1.35rem; font-weight: 500; }
 .app-head .kind { font-size: .7rem; color: var(--fg-40); letter-spacing: .04em; }
 .app .pitch { color: var(--fg); font-size: 1rem; font-weight: 300; line-height: 1.35; }
-.app .price-note { margin-top: auto; padding-top: .8rem; border-top: 1px solid var(--line-2); display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: .4rem; }
-.app .price-note b { font-weight: 500; font-size: .8rem; color: var(--fg); }
-.app .price-note .link-arrow { color: var(--app); font-size: .8rem; }
+.app .card-note { margin-top: auto; padding-top: .8rem; border-top: 1px solid var(--line-2); display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: .4rem; }
+.app .card-note b { font-weight: 500; font-size: .8rem; color: var(--fg); }
+.app .card-note .link-arrow { color: var(--app); font-size: .8rem; }
 .app .stretched::after { content: ""; position: absolute; inset: 0; }
 .app-mesa { --app: #0A84FF; }
 .app-som { --app: #A78BFA; }
@@ -176,3 +176,18 @@ html, body { overflow-x: clip; }
 .about-links { display: flex; align-items: center; gap: .8rem; flex-wrap: wrap; }
 .about .social a { width: 36px; height: 36px; }
 @media (prefers-reduced-motion: reduce) { .icon-row { animation: none; } }
+
+/* One license for the three apps */
+.bundle { width: 100%; max-width: 64rem; margin-top: 1rem; flex-direction: row; flex-wrap: wrap; align-items: center; gap: 1.2rem 1.6rem; padding: 1.4rem 1.6rem; text-align: left;
+  border-color: color-mix(in srgb, var(--brand) 45%, transparent); box-shadow: 0 0 3rem color-mix(in srgb, var(--brand) 14%, transparent); }
+.bundle-icons { display: flex; flex: none; }
+.bundle-icons img { width: 44px; height: 44px; }
+.bundle-icons img + img { margin-left: -10px; }
+.bundle-text { flex: 1 1 18rem; min-width: 0; display: flex; flex-direction: column; gap: .25rem; }
+.bundle-text h3 { font-size: 1.15rem; }
+.bundle-action { display: flex; flex-direction: column; align-items: flex-start; gap: .5rem; }
+.bundle-action .btn.primary { padding: .8rem 1.4rem; font-size: .85rem; }
+.bundle-action .btn.primary:disabled { opacity: .6; cursor: progress; }
+.buy-error { color: #E5484D; }
+.bundle-action .btn.primary { line-height: 1.25; text-align: center; }
+@media (max-width: 560px) { .bundle-action, .bundle-action .btn.primary { width: 100%; } }

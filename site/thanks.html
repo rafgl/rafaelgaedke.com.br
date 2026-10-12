@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Your license — Mesa, Som and Casa</title>
+<link rel="icon" href="/favicon.jpeg" type="image/jpeg">
+<link rel="stylesheet" href="/styles.css">
+<link rel="stylesheet" href="/theme.css">
+<style>
+:root { --brand: #D61C4E; } @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --brand: #F0476F; } } :root[data-theme="dark"] { --brand: #F0476F; }
+.thanks { min-height: 70vh; justify-content: center; text-align: center; }
+.thanks h1 { margin: 0; font-size: clamp(2rem, 6vw, 3rem); }
+.license-key { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: clamp(.95rem, 4.2vw, 1.3rem); letter-spacing: .04em; padding: 1rem 1.3rem; border: 1px solid var(--line-2); border-radius: 14px; background: var(--bg-2); color: var(--fg); user-select: all; overflow-wrap: anywhere; max-width: 100%; }
+.thanks .ctas { justify-content: center; }
+.dl { display: grid; grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)); gap: 12px; width: 100%; max-width: 40rem; margin-top: .6rem; }
+.dl a { display: flex; align-items: center; gap: .7rem; padding: .8rem 1rem; border-radius: 1.2rem; border: 1px solid var(--line-2); background: linear-gradient(to top, var(--bg-2), var(--bg)); color: var(--fg); font-weight: 500; font-size: .9rem; text-align: left; }
+.dl a:hover { border-color: color-mix(in srgb, var(--brand) 50%, transparent); }
+.dl img { width: 40px; height: 40px; flex: none; }
+.dl small { display: block; color: var(--fg-60); font-weight: 300; font-size: .72rem; }
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-in">
+    <a class="brand" href="/"><span>Rafael Mendonça</span></a>
+  </div>
+</header>
+<main class="wrap section thanks">
+  <div class="bundle-icons" aria-hidden="true" style="display:flex"><img src="/apps/mesa.png" width="56" height="56" alt=""><img src="/apps/som.png" width="56" height="56" alt="" style="margin-left:-12px"><img src="/apps/casa.png" width="56" height="56" alt="" style="margin-left:-12px"></div>
+  <h1 id="title">Getting your license…</h1>
+  <p class="lead" id="lead"></p>
+  <div class="license-key" id="key" hidden></div>
+  <div class="ctas" id="actions" hidden>
+    <button type="button" class="btn primary" id="copy">Copy key</button>
+  </div>
+  <p class="fine" id="fine" hidden></p>
+  <div class="dl" id="downloads" hidden>
+    <a href="https://mesa-mac-app.web.app/#download"><img src="/apps/mesa.png" alt=""><span>Mesa<small id="dl-label-1">Download</small></span></a>
+    <a href="https://som-mac-control.web.app/#download"><img src="/apps/som.png" alt=""><span>Som<small id="dl-label-2">Download</small></span></a>
+    <a href="https://casa-home-control.web.app/#download"><img src="/apps/casa.png" alt=""><span>Casa<small id="dl-label-3">Download</small></span></a>
+  </div>
+</main>
+<footer class="footer2"><p class="copy" style="margin:0">© 2026 Rafael Mendonça · <a href="/">rafaelgaedke.com.br</a></p></footer>
+<script>
+const SERVER = 'https://htgwqecyjijjbayeooix.supabase.co/functions/v1/license';
+const pt = (() => {
+  const fromUrl = new URLSearchParams(location.search).get('lang');
+  if (fromUrl) return fromUrl === 'pt';
+  try { const saved = localStorage.getItem('rm.lang'); if (saved) return saved === 'pt'; } catch { /* storage unavailable */ }
+  return (navigator.language || '').toLowerCase().startsWith('pt');
+})();
+const text = pt ? {
+  loading: 'Buscando sua licença…', title: 'Obrigado! Esta é sua licença.',
+  lead: 'Esta chave funciona no Mesa, no Som e no Casa. Abra qualquer um deles e cole a chave no painel do app.',
+  copy: 'Copiar chave', copied: 'Copiada',
+  fine: 'Guarde esta chave. Ela vale para até 3 Macs seus. Compra feita com {email}.',
+  fineNoEmail: 'Guarde esta chave. Ela vale para até 3 Macs seus.',
+  download: 'Baixar', docTitle: 'Sua licença — Mesa, Som e Casa',
+  failed: 'Não encontramos o pagamento', failedLead: 'Se você pagou, recarregue esta página em alguns segundos. Se continuar, escreva para rafaelgaedke@gmail.com usando o e-mail da compra.',
+} : {
+  loading: 'Getting your license…', title: 'Thank you! Here is your license.',
+  lead: 'This key works in Mesa, Som and Casa. Open any of them and paste the key into the app\'s panel.',
+  copy: 'Copy key', copied: 'Copied',
+  fine: 'Keep this key. It works on up to 3 of your Macs. Purchased with {email}.',
+  fineNoEmail: 'Keep this key. It works on up to 3 of your Macs.',
+  download: 'Download', docTitle: 'Your license — Mesa, Som and Casa',
+  failed: 'We could not find the payment', failedLead: 'If you paid, reload this page in a few seconds. If it keeps failing, write to rafaelgaedke@gmail.com from the email you paid with.',
+};
+document.documentElement.lang = pt ? 'pt-BR' : 'en';
+document.title = text.docTitle;
+const $ = (id) => document.getElementById(id);
+$('title').textContent = text.loading;
+$('copy').textContent = text.copy;
+for (const i of [1, 2, 3]) $(`dl-label-${i}`).textContent = text.download;
+
+(async () => {
+  try {
+    const sessionId = new URLSearchParams(location.search).get('session_id');
+    if (!sessionId) throw new Error('no session');
+    const response = await fetch(`${SERVER}/claim`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ session_id: sessionId }),
+    });
+    const { key, email } = await response.json();
+    if (!response.ok || !key) throw new Error('claim');
+    $('title').textContent = text.title;
+    $('lead').textContent = text.lead;
+    $('key').textContent = key;
+    $('key').hidden = false;
+    $('copy').addEventListener('click', async () => {
+      try { await navigator.clipboard.writeText(key); $('copy').textContent = text.copied; } catch { /* select the key by hand */ }
+    });
+    $('actions').hidden = false;
+    $('fine').textContent = email ? text.fine.replace('{email}', email) : text.fineNoEmail;
+    $('fine').hidden = false;
+    $('downloads').hidden = false;
+  } catch {
+    $('title').textContent = text.failed;
+    $('lead').textContent = text.failedLead;
+  }
+})();
+</script>
+</body>
+</html>
