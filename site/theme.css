@@ -155,7 +155,24 @@ p, li { font-weight: 300; }
 @keyframes rise { from { opacity: 0; transform: translateY(14px) scale(.96); } to { opacity: 1; transform: none; } }
 @media (prefers-reduced-motion: reduce) { .hero-photo { animation: none; } .app { transition: none; } .app:hover { transform: none; } }
 
-@media (max-width: 640px) {
-  .topbar .brand span { display: none; }
-}
 html, body { overflow-x: clip; }
+
+/* Apps-first hero: the three app cards sit right in the top section */
+.apps-hero { gap: 1rem; }
+.apps-hero h1 { margin: 0; font-size: clamp(2.2rem, 6vw, 3.4rem); max-width: 40rem; }
+.apps-hero .grid3 { max-width: 64rem; margin-top: 1.6rem; text-align: left; }
+.icon-row { display: flex; justify-content: center; gap: .4rem; animation: rise .9s cubic-bezier(.2, .8, .2, 1) both; }
+.icon-row img { width: 88px; height: 88px; filter: drop-shadow(0 14px 24px rgba(0, 0, 0, .18)); }
+.icon-row img:nth-child(2) { transform: translateY(-10px); }
+@media (max-width: 480px) { .icon-row img { width: 68px; height: 68px; } }
+
+/* Compact about block */
+.about { flex-direction: row; flex-wrap: wrap; align-items: center; gap: 1.2rem; width: 100%; max-width: 52rem; padding: 1.4rem 1.6rem; }
+.avatar { width: 56px; height: 56px; flex: none; border-radius: 50%; object-fit: cover; object-position: 50% 35%; }
+.about-text { flex: 1 1 22rem; min-width: 0; display: flex; flex-direction: column; gap: .35rem; }
+.about-text h2 { margin: 0; text-align: left; font-size: 1.1rem; font-weight: 500; }
+.about-text p { margin: 0; }
+.about-text .fine a { color: var(--fg-60); border-bottom: 1px solid var(--line-2); }
+.about-links { display: flex; align-items: center; gap: .8rem; flex-wrap: wrap; }
+.about .social a { width: 36px; height: 36px; }
+@media (prefers-reduced-motion: reduce) { .icon-row { animation: none; } }
